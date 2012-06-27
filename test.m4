@@ -64,3 +64,18 @@ indir(`M7',1,2,3)
 indir
 ifdef(`M7', ``M7' is  defined', ``M7' is not defined')
 
+define(`DD1', `dd1')
+define(`DD3', `dd3')
+define(`DD2', ``DD1'')
+define(`DDx', `$1': ``DD3'' : `DD2')
+#dumpdef(`DD1', `)
+#dumpdef(`DDx')
+
+traceon(`DD1',`DDx')
+DD1()
+DDx()
+
+# arothimir
+define(`INC', `incr(`$1')')
+INC(1)
+

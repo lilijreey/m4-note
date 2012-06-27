@@ -81,6 +81,8 @@ LP...RP -> (...)
 # EE 计算
 # 提供eval函数 操作符和C一致
 # incr decr 内置
+#define(`INC', `incr(`$1')')
+#INC(1)
 
 # EE string
 # len e.g len(`fesf')
@@ -146,3 +148,16 @@ LP...RP -> (...)
 #如果定义了name，就扩展stringj-1,
 #否则就扩占string-2,if string-2 is omitted.
 #就会扩增为empty-stirng
+
+
+## EE 如何输出\t \r \n ??
+
+
+## DEBUG
+## EE dumpdef([name...]) 
+#把指定的Macro的定义打印到stderr
+#如果找不到输出错误
+
+# EE traceon([name...]) 
+#    traceoff([name...])
+# 跟踪Marco的调用和替换
