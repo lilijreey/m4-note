@@ -8,3 +8,5 @@ monster.lua: monster.lua.m4
 	rm -f $@
 	m4 $^ > $@
 
+test:
+	m4 test.m4

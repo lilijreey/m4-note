@@ -79,3 +79,23 @@ DDx()
 define(`INC', `incr(`$1')')
 INC(1)
 
+format(`Result is %d', eval(2**4))
+
+# empty string define(`xxx', ``xxx'`'ok')
+define(`active', `ACC, OOX')
+define(`show', `$1 $1')
+show(```active''')
+`active'
+
+indir(define, `oxo', `1o1')
+oxo
+ifelse(oxo)
+
+divert(`1')dnl
+ `1 divert output'
+divert dnl
+ `0 divert output'
+divert dnl
+    `first'
+divert dnl
+    `second'
